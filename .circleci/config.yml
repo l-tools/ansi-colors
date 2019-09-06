@@ -3,7 +3,7 @@ version: 2
 jobs:
   test:
     docker:
-      - image: rust:1
+      - image: circleci/rust:1.36.0
     steps:
       - checkout
       - version:
