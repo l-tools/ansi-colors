@@ -7,7 +7,7 @@ jobs:
         steps:
             - checkout
             - run: cargo test --all
-            - run: cargo run --examples all
+            - run: cargo run --example basic_blue
             - run: cargo doc --all
             - run: cargo build
             - run: cargo build --release
