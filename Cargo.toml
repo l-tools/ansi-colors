@@ -4,13 +4,15 @@ version = "0.1.1"
 authors = ["guy <guy123levinger@gmail.com>"]
 edition = "2018"
 description = "an ansi-coloring sceme crate that allows you to format and color your output"
-
 repository = "http://github.com/l-tools/ansi-colors"
 readme = "README.md"
 categories = ["graphics","gui","command-line-interface"]
 keywords = ["cli", "api","gui"]
 license = "MIT"
 documentation = "https://docs.rs/ansi-colors/0.1.0/ansi_colors"
+
+[badges]
+circle-ci = { repository = "http://github.com/l-tools/ansi-colors", branch = "master" }
 
 [profile.dev]
 opt-level = 0

@@ -1,3 +1,4 @@
+[![Cirrus-CI Status]][Cirrus-CI] [![Latest Version]][crates.io] [![Documentation]][docs.rs] ![License]
 # ansi-colors
 ## What is it and what is it for?
 
