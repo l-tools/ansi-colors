@@ -1,6 +1,6 @@
 use ansi_colors::*;
 fn main(){
-    let mut str1 = ColouredStr::new("dsassdasa");
+    let mut str1 = ColouredStr::new("hello ansi");
     str1.blue();
-    println!("{}",str1.coloured_string);
+    println!("{}",str1);
 }
