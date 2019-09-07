@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/l-tools/ansi-colors.svg?style=svg)](https://circleci.com/gh/l-tools/ansi-colors)  ![crates.io](https://img.shields.io/crates/v/ansi-colors.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![doc.rs](https://docs.rs/ansi-colors/badge.svg?version=0.1.0)
+![CircleCI](https://circleci.com/gh/l-tools/ansi-colors.svg?style=svg)(https://circleci.com/gh/l-tools/ansi-colors)  ![crates.io](https://img.shields.io/crates/v/ansi-colors.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![doc.rs](https://docs.rs/ansi-colors/badge.svg?version=0.1.0)
 # ansi-colors
 ## What is it and what is it for?
 
