@@ -58,7 +58,7 @@ pub enum Styles{
     Reverse = 7 ,
     Hidden = 8 ,
 }
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone,PartialEq)]
 #[allow(dead_code)]
 ///Following the color/style/background reseting related colors in the ansi documentation
 pub enum Reset{

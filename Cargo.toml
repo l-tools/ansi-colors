@@ -1,6 +1,6 @@
 [package]
 name = "ansi-colors"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["guy <guy123levinger@gmail.com>"]
 edition = "2018"
 description = "an ansi-coloring sceme crate that allows you to format and color your output"
@@ -9,7 +9,7 @@ readme = "README.md"
 categories = ["graphics","gui","command-line-interface"]
 keywords = ["cli", "api","gui"]
 license = "MIT"
-documentation = "https://docs.rs/ansi-colors/0.1.0/ansi_colors"
+documentation = "https://docs.rs/ansi-colors/0.2.0/ansi_colors"
 
 [badges]
 circle-ci = { repository = "http://github.com/l-tools/ansi-colors", branch = "master" }

@@ -1,5 +1,5 @@
 # ansi-colors
-[![CircleCI](https://circleci.com/gh/l-tools/ansi-colors.svg?style=svg)](https://circleci.com/gh/l-tools/ansi-colors)  ![crates.io](https://img.shields.io/crates/v/ansi-colors.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![doc.rs](https://docs.rs/ansi-colors/badge.svg?version=0.1.0)
+[![CircleCI](https://circleci.com/gh/l-tools/ansi-colors.svg?style=svg)](https://circleci.com/gh/l-tools/ansi-colors)  ![crates.io](https://img.shields.io/crates/v/ansi-colors.svg) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![doc.rs](https://docs.rs/ansi-colors/badge.svg?version=0.2.0)
 ## What is it and what is it for?
 
 ansi-colors is a rust crate(library) that should be used to format terminal string outputs.
@@ -24,7 +24,7 @@ ansi-colors works best(for now) with the ubuntu terminal coloring scheme, but it
 Add the following to your Cargo.toml:
 ```rust
 [dependencies]
-ansi-colors = "0.1.0"
+ansi-colors = "0.2.0"
 ```
 First use import the crate:
 ```rust
