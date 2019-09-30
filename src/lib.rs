@@ -49,21 +49,6 @@ impl <'a> fmt::Display for ColouredStr<'a> {
         write!(f, "{}", self.coloured_string)
     }
 }
-/*
-impl <'a> Deref for ColouredStr<'a> {
-    type Target = ColouredStr<'a>;
-    fn deref(&self) -> &Self::Target{
-        let col1 = ColouredStr{string:self.string,
-        coloured_string:self.coloured_string,
-        colorer:self.colorer,
-        closer:self.closer,
-        reset:self.reset,
-        text_color:self.text_color,
-        background_color:self.background_color,
-        styles:self.styles};
-        &col1
-    }
-}*/
 impl <'a> ColouredStr<'a> {
     ///This functions recieves one parameter - a string and creates a defult struct for it.
     ///the color is natural(no change), as well as the styles and background.
@@ -85,12 +70,26 @@ impl <'a> ColouredStr<'a> {
         };
         return col1;
     }
+    /*
+    fn cpy(self)->Self{
+        let col1 = ColouredStr{
+            string:self.string,
+            coloured_string:self.coloured_string,
+            colorer:self.colorer,
+            closer:self.closer,
+            resets:self.resets,
+            text_color:self.text_color,
+            background_color:self.,
+            styles:self.styles};
+        col1
+        cc
+    }*/
     fn refresh(&mut self){
         let clo1 = &(self.set_closer())[..];
         let col1 = &(self.set_colorer())[..];
         let strr = self.string;
         (*self).coloured_string = format!("{}{}{}",col1,strr,clo1);
-}
+    }
     fn set_colorer(&self)->String{
         let mut tc = "".to_string();
         if (self.text_color as u8) != 0{
@@ -126,6 +125,22 @@ impl <'a> ColouredStr<'a> {
         }
         return format!("{}{}{}",OPENING_COLOR,&res[..],COLOR_CLOSER);
     }
+    ///This functions takes self and presents the color string in error format
+    pub fn to_error(&mut self){
+        self.red();
+        self.bold();
+        self.underline();
+        self.blink();
+    }
+    ///This functions takes self and presents the color string in success format
+    pub fn to_success(&mut self){
+        self.green();
+        self.bold();
+    }
+    ///This functions takes self and presents the color string in password format
+    pub fn to_password(&mut self){
+        self.hidden();
+    }
     ///This functions takes self and changes coloured string color into blue
     ///
     ///
@@ -136,9 +151,13 @@ impl <'a> ColouredStr<'a> {
     ///let str2 = format!("{}{}{}","\u{1b}[49;34m","hello world","\u{1b}[0m");
     ///assert_eq!(str1.coloured_string,str2);
     ///```
-    pub fn blue(&mut self){
+    pub fn blue(&mut self)->Self{
+        let mut strrr = self.clone();
         self.text_color = TextColours::Blue; 
+        strrr.text_color = TextColours::Blue; 
         self.refresh();
+        strrr.refresh();
+        strrr
     }
     ///This functions takes self and changes coloured string color into black
     ///
@@ -374,9 +393,13 @@ impl <'a> ColouredStr<'a> {
     ///let str2 = format!("{}{}{}","\u{1b}[1;49;97m","hello world","\u{1b}[0m");
     ///assert_eq!(str1.coloured_string,str2);
     ///```
-    pub fn bold(&mut self){
+    pub fn bold(&mut self)->Self{
+        let mut strrr = (*self).clone();
         self.styles.push(Styles::Bold); 
+        strrr.styles.push(Styles::Bold); 
         self.refresh();
+        strrr.refresh();
+        strrr
     }
     ///This functions takes self and adds the dim style to the string
     ///
@@ -402,9 +425,13 @@ impl <'a> ColouredStr<'a> {
     ///let str2 = format!("{}{}{}","\u{1b}[4;49;97m","hello world","\u{1b}[0m");
     ///assert_eq!(str1.coloured_string,str2);
     ///```
-    pub fn underline(&mut self){
+    pub fn underline(&mut self)->Self{
+        let mut strrr = self.clone();
         self.styles.push(Styles::Underline); 
+        strrr.styles.push(Styles::Bold); 
         self.refresh();
+        strrr.refresh();
+        strrr
     }
     ///This functions takes self and adds the blinking style to the string
     ///
